@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "CorePlot-CocoaTouch.h"
 
 @interface ViewController ()
 
@@ -19,14 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self sayHello];
     
-    
-    CPTGraphHostingView *hostingView = [[CPTGraphHostingView alloc] initWithFrame:CGRectMake(0, 64, 320, 500)];
-    hostingView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:hostingView];
-    //禁止缩放：（两指捏扩动作）
-    [hostingView setAllowPinchScaling:YES];
-    
+}
+
+- (void)sayHello {
+    NSLog(@"Hello!");
 }
 
 - (void)didReceiveMemoryWarning {
